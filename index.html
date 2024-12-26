@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bloco de Notas Moderno e Avançado">
+    <meta name="keywords" content="notas, bloco de notas, organização, produtividade">
+    <meta name="author" content="Seu Nome">
+    <title>Caderno de Notas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <link rel="icon" href="favicon-16x16.png" type="image/x-icon">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Barra Lateral -->
+        <aside class="sidebar">
+            <h2>
+                <img src="favicon-32x32.png" alt="Ícone Bloco de Notas" style="vertical-align: middle; margin-right: 8px;">
+                Bloco de Notas
+            </h2>
+     
+        </aside>
+        <!-- Conteúdo Principal -->
+        <div class="main-content">
+            <header>
+                <div class="header-controls">
+                    <input type="text" id="search-input" placeholder="Buscar notas..." aria-label="Buscar notas">
+                    <button id="theme-toggle" aria-label="Alternar modo escuro">
+                        <i class="fas fa-moon"></i>
+                    </button>
+              
+                    </label>
+                </div>
+            </header>
+            <!-- Seção de Entrada de Notas -->
+            <section class="note-input">
+                <input type="text" id="note-title" placeholder="Título da nota" aria-label="Título da nota">
+                <div id="editor"></div>
+                <div class="note-controls">
+                    <select id="note-category" aria-label="Selecione uma categoria">
+                        <option value="">Selecione uma categoria</option>
+                        <option value="pessoal">&#xf007; Pessoal</option>
+                        <option value="trabalho">&#xf0b1; Trabalho</option>
+                        <option value="estudo">&#xf19d; Estudo</option>
+                        <option value="outro">&#xf12a; Outro</option>
+                    </select>
+                    <button id="add-note" aria-label="Adicionar Nota">
+                        <i class="fas fa-plus"></i> Adicionar Nota
+                    </button>
+                </div>
+            </section>
+            <!-- Lista de Notas -->
+            <section id="notes-list" class="notes-grid"></section>
+        </div>
+    </div>
+    <!-- Suporte via WhatsApp -->
+    <div id="whatsapp-support" class="whatsapp-float">
+        <a href="https://wa.me/86974007368" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
